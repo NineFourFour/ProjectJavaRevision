@@ -54,12 +54,13 @@ public class ObjectReferencesVsPrimitives {
 		
 		Person p3 = new Person();
 		p3.name = "p3";
+		System.out.println("p3's name: " + p3.name);
 		/* 
 		 * 	p3 --> ( name = "p3")
 		 */
 		p3 = p2; // Make p3 refer to the same object as p2
+		System.out.println("p3 = p2 --p3.name: " + p3.name);
 		//  
-		
 		/* When p3 is reassigned to refer to the object that p2 refers
 		 * to, the object with name="p3" is no longer accessible and
 		 * becomes eligible for garbage collection as it can no longer
@@ -80,11 +81,12 @@ public class ObjectReferencesVsPrimitives {
 		 * 								 \       
 		 * 		   					 	  \ p3
 		 */
-		System.out.println(p2.name);  // Mary
+		System.out.println("p3.name is asigned the Value 'Mary' so p2.name = "+p2.name);  // Mary
 		
 		Person p4 = new Person();
-		p4.name = "Mary";
+		p4 = p3;
 		/*  p4 -->  ( name = "Mary" ) */
+		System.out.println("p4's name: " + p4.name);
 	}
 }
 class Person {
