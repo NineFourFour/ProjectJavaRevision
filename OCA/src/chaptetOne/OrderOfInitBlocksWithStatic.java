@@ -1,8 +1,6 @@
 package chaptetOne;
 
 
-
-
 public class OrderOfInitBlocksWithStatic {
 
 	public static void main(String[] args) {
@@ -11,8 +9,7 @@ public class OrderOfInitBlocksWithStatic {
 		/*
 		 * Static init block
 		 * 999
-		 */
-		
+		 */		
 		new Stats();
 		/*
 		 * Member variable setting up
