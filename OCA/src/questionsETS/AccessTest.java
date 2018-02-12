@@ -24,11 +24,7 @@ public class AccessTest{
 	   public static void main(String args[]) {  
 		   new AccessTest();  
 	   
-		   String[] strings = { "stringValue" }; // strings         -->
-		   Object[] objects = strings; // objects        --> [ "stringValue" ]
-		   String[] againStrings = (String[]) objects; // againStrings -->
-		   //againStrings[0] = new StringBuilder();
-		   objects[0] = new StringBuilder();
+	
 	   
 	   
 	   
