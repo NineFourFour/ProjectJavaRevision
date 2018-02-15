@@ -13,7 +13,14 @@ public class StringStringBuilder {
 		System.out.println(change);
 		change = changeString(change);
 		System.out.println(change);
-		
+		StringBuilder b1 = new StringBuilder("snorkler");
+		b1.append("str");
+		b1.replace(1, 2, "12345");
+		StringBuilder sb1 = new StringBuilder("New");
+		sb1.append("STOP").substring(0, 5);
+		System.out.println(sb1);
+		String s1 = sb1.append("STOP").substring(0, 5);
+		System.out.println("String s1: "+s1);
 		System.out.println("minimum".replace("in","p"));
 	}
 	
