@@ -1,0 +1,10 @@
+package questionsETS;
+
+import chaptetOne.*;
+
+//1  <== INSERT STATEMENT(s) HERE
+public class Y{
+  public static void main(String[] args){
+     System.out.println(X.LOGICID);
+  }
+}
