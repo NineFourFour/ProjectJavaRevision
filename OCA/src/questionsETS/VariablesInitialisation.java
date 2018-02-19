@@ -29,10 +29,18 @@ public class VariablesInitialisation {
 	protected static int protectedStaticVar;
 	static int defaultStaticVar;
 	
-	
-	static final int staticFinalInt = 120;
-	
-	
+	/*	
+	 * 	Initialize staticFinalVar either on the same line or in a static
+	 * 	initialization block
+	 * 
+	 * 	no where else
+	 * 
+	 * */
+	static final int staticFinalInt;
+	static{
+		staticFinalInt = 120;
+	}
+
 
 	
 	public VariablesInitialisation(){
@@ -55,6 +63,86 @@ public class VariablesInitialisation {
 		this.protectedVar = protectedVar;
 		this.defaultVar = defaultVar;
 		//this.finalVar = finalVar;
+	}
+	public void localVar(){
+		int var;
+		if(true){
+			var = 10;
+		}
+		
+		
+	}
+
+	public int getPrivateVar() {
+		return privateVar;
+	}
+
+	public void setPrivateVar(int privateVar) {
+		this.privateVar = privateVar;
+	}
+
+	public int getPublicVar() {
+		return publicVar;
+	}
+
+	public void setPublicVar(int publicVar) {
+		this.publicVar = publicVar;
+	}
+
+	public int getProtectedVar() {
+		return protectedVar;
+	}
+
+	public void setProtectedVar(int protectedVar) {
+		this.protectedVar = protectedVar;
+	}
+
+	public int getDefaultVar() {
+		return defaultVar;
+	}
+
+	public void setDefaultVar(int defaultVar) {
+		this.defaultVar = defaultVar;
+	}
+
+	public static int getPrivateStaticVar() {
+		return privateStaticVar;
+	}
+
+	public static void setPrivateStaticVar(int privateStaticVar) {
+		VariablesInitialisation.privateStaticVar = privateStaticVar;
+	}
+
+	public static int getPublicStaticVar() {
+		return publicStaticVar;
+	}
+
+	public static void setPublicStaticVar(int publicStaticVar) {
+		VariablesInitialisation.publicStaticVar = publicStaticVar;
+	}
+
+	public static int getProtectedStaticVar() {
+		return protectedStaticVar;
+	}
+
+	public static void setProtectedStaticVar(int protectedStaticVar) {
+		VariablesInitialisation.protectedStaticVar = protectedStaticVar;
+	}
+
+	public static int getDefaultStaticVar() {
+		return defaultStaticVar;
+	}
+
+	public static void setDefaultStaticVar(int defaultStaticVar) {
+		VariablesInitialisation.defaultStaticVar = defaultStaticVar;
+	}
+
+	public int getFinalVar() {
+		return finalVar;
+	}
+
+	public static int getStaticfinalint() {
+		return staticFinalInt;
 	}
 	
 	
