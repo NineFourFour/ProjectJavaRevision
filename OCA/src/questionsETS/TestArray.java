@@ -12,7 +12,7 @@ public class TestArray {
 		
 		Object[] obj = new Object[]{ "aaa", new Object(), new ArrayList<>(), new String[]{""} };
 		//Object obj1 = new Object[]{ "aaa", new Object(), new ArrayList(), {}--not vaild way of creating an object };
-		System.out.println(arr[3][0][1]);
+		//System.out.println(arr[3][0][1]);
 		
 		/* {} is not a valid way to create an Object here. 
 		 * However, it is valid while creating an array.
@@ -90,22 +90,30 @@ public class TestArray {
 		int i = 1;
 		int[] iArr = {1};
 		
-		System.out.println(iArr.getClass());
+		//System.out.println(iArr.getClass());
 		
 		int[][] d2Array = new int[1][];
 		
-		System.out.println(d2Array.getClass());
+		
+		/****************************Examples of Pass By Value********************************************
+		 * 
+		 */
+		//System.out.println(d2Array.getClass());
+		System.out.println("Before Method incr i : "+i);
 		incr(i) ;
-		incr(iArr) ;
-		System.out.println( "i = " + i + "  iArr[0] = " + iArr [ 0 ] ) ;
+		System.out.println("After Method incr i : "+i+"\n");
+		//incr(iArr) ;
+		//System.out.println( "i = " + i + "  iArr[0] = " + iArr [ 0 ] ) ;
 		
 		//pass by reference
 		String str = "String";
+		System.out.println("Before method: "+str);
 		incrString(str);
-		System.out.println("After method: "+str);
+		System.out.println("After method: "+str+"\n");
+		
 		StringBuilder strBuf = new StringBuilder("StringBuilder");
 		incrStringBuilder(strBuf);
-		System.out.println("After the method: "+strBuf);
+		System.out.println("After the method: "+strBuf+"\n");
 		
 		
 		Animal a1 = new Animal("Lion");
@@ -113,20 +121,42 @@ public class TestArray {
 
 		System.out.println("Before Swap:- a1:" + a1 + "; a2:" + a2);
 		swap(a1, a2);
-		System.out.println("After Swap:- a1:" + a1 + "; a2:" + a2);
+		System.out.println("After Swap:- a1:" + a1 + "; a2:" + a2+"\n");
 		
 		System.out.println("Before Modify:- a1:" + a1);
 		modify(a1);
-		System.out.println("After Modify:- a1:" + a1);
+		System.out.println("After Modify:- a1:" + a1+"\n");
 		
 		String str1 = "MotorCycle";
 		String str2 = new String("MotorCycle");
+		String str3 = "Motor";
+		String str4 = "Cycle";
+		String str5 = new String("Motor");
+		String str6 = new String("Cycle");
+		final String str7 = "Motor";
+		final String str8 = "Cycle";
+		
+		System.out.println("Str1 : "+str1+", Str2 new String : "+str2);
 		System.out.println("str1 == str2: "+(str1==str2));
 		System.out.println("str1.equals(str2): "+str1.equals(str2));
+		System.out.println("str1 == str2.intern() : "+(str1==str2.intern()));
+		System.out.println("Str1 : "+str1+", Str3 : "+str3+", Str4 : "+str4);
+		System.out.println("str1 == str3+str4: "+(str1==(str3+str4)));
+		System.out.println("str1 == (str3+str4).intern(): "+(str1==(str3+str4).intern())+"\n");
+		
+		System.out.println("Str1 : "+str1+", Str5 new String : "+str5+", Str6 new String : "+str6);
+		System.out.println("str1 == str5+str6: "+(str1==(str5+str6)));
+		System.out.println("str1 == (str5+str6).intern(): "+(str1==(str5+str6).intern())+"\n");
+		
+		System.out.println("Str1 : "+str1+", final Str7 : "+str7+", final Str8 : "+str8);
+		System.out.println("str1 == str7+str8: "+(str1==(str7+str8)));
+		System.out.println("str1 == (str7+str8).intern(): "+(str1==(str7+str8).intern())+"\n");
 	}
+	
 	public static void incrStringBuilder(StringBuilder s) {
-    	s.append(" inside the method");
-    	System.out.println("String s: "+s);
+    	s.append(" append String");
+    	s.deleteCharAt(2);
+    	System.out.println("StringBuilder inside Method: "+s);
     	
     }
 	
@@ -140,7 +170,7 @@ public class TestArray {
 	
     public static void incr(int n) {
     	n++ ;
-    	System.out.println("n: "+n);
+    	System.out.println("Increment the passed variable: "+n);
     	
     }
     public static void incr(int[ ] n ) { 
@@ -154,10 +184,13 @@ public class TestArray {
 		temp = animal1;
 		animal1 = animal2;
 		animal2 = temp;
+		System.out.println("Inside swap: a1 = "+animal1+", a2 : "+animal2);
 	}
     public static void modify(Animal a) {
     	a = new Animal("");
     	a.setAnimal("Reference");
+    	a.name = "Big Bad Dog";
+    	System.out.println("Inside modify a.name : "+a);
     }
  
 }
