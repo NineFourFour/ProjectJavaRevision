@@ -1,0 +1,29 @@
+package exceptionsEg;
+
+class E1 extends Exception{}
+class E2 extends E1{}
+
+public class ExceptionSubclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		try{
+			throw new E2();
+		}catch(E2 e){
+			System.out.println("E2");
+		}catch(E1 e){
+			System.out.println("E1");
+		}catch(Exception e){
+			System.out.println("E");
+		}finally{
+			System.out.println("Finally");
+		}
+	}
+
+}
+/*	Output
+ * 	E2
+ * 	Finally
+ * 
+ */
