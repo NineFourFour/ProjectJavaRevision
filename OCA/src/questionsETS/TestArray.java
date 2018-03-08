@@ -9,6 +9,7 @@ public class TestArray {
 	}*/
 	public static void main(String[] args) {
 		String[][][] arr={{ { "a", "b" , "c"}, { "d", "e", null } },{ {"x"}, null },{{"y"}},{{ "z","p"},{}}};
+		//throw new RuntimeException();
 		
 		Object[] obj = new Object[]{ "aaa", new Object(), new ArrayList<>(), new String[]{""} };
 		//Object obj1 = new Object[]{ "aaa", new Object(), new ArrayList(), {}--not vaild way of creating an object };
@@ -192,6 +193,7 @@ public class TestArray {
     	a.name = "Big Bad Dog";
     	System.out.println("Inside modify a.name : "+a);
     }
+  
  
 }
 class Animal {
