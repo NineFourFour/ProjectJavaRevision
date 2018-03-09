@@ -1,0 +1,15 @@
+package chapter5ClassDesign;
+
+public class Lion extends BigCat {
+
+	public Lion(int age){
+		super(age);
+	}
+	public String getName(){
+		//String.valueOf(this.getAge());
+		return "Lion";
+	}
+	public void roar(){
+		System.out.println("I'm a Lion, you better RUN.");
+	}
+}

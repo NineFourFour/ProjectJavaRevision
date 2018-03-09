@@ -5,4 +5,6 @@
 <fullyQualifiedTypeName name="chaptetOne.X"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
 <fullyQualifiedTypeName name="casting.Capybara"/>
+<fullyQualifiedTypeName name="chapter5ClassDesign.Kangaroo"/>
+<fullyQualifiedTypeName name="chapter5ClassDesign.Marsupial"/>
 </qualifiedTypeNameHistroy>

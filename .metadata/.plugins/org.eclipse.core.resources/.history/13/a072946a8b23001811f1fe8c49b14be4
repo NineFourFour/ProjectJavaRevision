@@ -1,0 +1,24 @@
+package chapter5ClassDesign;
+
+public class Gorilla extends Animal {
+	
+	/* 	
+	 * 	since Animal has no non-args constructor
+	 * 	Gorilla needs a constructor or it will not complie
+	 * 
+	 */
+	public Gorilla(int age){
+		super(age, "Gorilla");
+	}
+	public Gorilla(){
+		super(5);
+	}
+	public String getName(){
+		return this.getName();
+	}
+	public static void main(String[] args) {
+		Gorilla g = new Gorilla(10);
+		
+		System.out.println(g.getName());
+	}
+}

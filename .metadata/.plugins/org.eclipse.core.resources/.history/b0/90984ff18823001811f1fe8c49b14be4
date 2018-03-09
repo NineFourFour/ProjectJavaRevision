@@ -1,0 +1,37 @@
+package chapter5ClassDesign;
+
+public class Kangaroo extends Marsupial{
+	//protected int tailLength = 8;
+	
+	StringBuilder sb = new StringBuilder("StringBuilder");
+	
+	public static boolean isBiped(){
+		
+		return true;
+	}
+
+	public void getKangarooDescription(){
+		tailLength = 2228;
+		System.out.println("Kangaroo Walks on two legs: "+isBiped()+" tailLength : "+tailLength+" super.tailLength : "+super.tailLength);
+	}
+	public void outBack(){
+		 
+	}
+	public void numberOfLegs(){
+		
+		System.out.println(2);
+	}
+	public static void main(String[] args) {
+		Kangaroo joey = new Kangaroo();
+		joey.getMarsupialDescription();
+		joey.getKangarooDescription();
+		
+		Marsupial m = new Kangaroo();
+		System.out.println("\nm.getMarsupialDescription();");
+		m.getMarsupialDescription();
+		System.out.println("\n((Kangaroo)m).getKangarooDescription();");
+		((Kangaroo)m).getKangarooDescription();
+		m.finalMethod();
+		
+	}
+}
