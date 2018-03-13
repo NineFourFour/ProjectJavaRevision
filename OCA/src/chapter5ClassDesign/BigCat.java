@@ -6,4 +6,13 @@ public abstract class BigCat extends Animal {
 		super(age);
 	}
 	public abstract void roar();
+	
+	public String getName(){
+		return "BigCat";
+	}
+	
+	public void displayInformation(){
+		System.out.println("The name of the BigCat is: "+getName());
+	}
+
 }

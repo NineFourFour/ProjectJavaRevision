@@ -15,12 +15,18 @@ public class Lion extends BigCat {
 	public void eat(){
 		System.out.println("Lion is eating");
 	}
-	
+
 	public static void main(String[] args) {
 		Lion l = new Lion(12);
 		System.out.println("Lion's age: "+l.getAge());
 		Animal a = new Lion(4);
 		a.eat();
 		((Lion)a).roar();
+		
+		Lion l1 = (Lion)a;
+		Animal a1 = l1;
+		
+		BigCat bc = new Lion(12);
+		bc.displayInformation();
 	}
 }
