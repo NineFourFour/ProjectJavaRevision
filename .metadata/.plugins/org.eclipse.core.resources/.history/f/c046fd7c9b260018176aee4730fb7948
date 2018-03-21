@@ -1,0 +1,27 @@
+package chapter5ClassDesign;
+
+	public class TestClass{
+		static int si = 10;
+		public TestClass(){
+			System.out.println("TestClass : "+this.si);
+		}
+		public String toString(){
+			return "TestClass.si = "+this.si;
+		} 
+		
+	   public static void main(String args[] ){ 
+		   A b = new B("good bye");
+		   new TestClass(); 
+	   
+	   }
+	}
+	class A{
+	   A() { this("hello", " world");  }
+	   A(String s) { System.out.println(s); }
+	   A(String s1, String s2){ this(s1 + s2); }
+	}
+	class B extends A{
+	   B(){ super("good bye"); };
+	   B(String s){ super(s, " world"); }
+	   B(String s1, String s2){ this(s1 + s2 + " ! "); }
+	}

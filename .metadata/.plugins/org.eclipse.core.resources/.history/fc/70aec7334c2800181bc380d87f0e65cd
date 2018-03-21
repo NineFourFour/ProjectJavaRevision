@@ -1,0 +1,42 @@
+package casting;
+
+interface Vehicle {
+}
+class Car implements Vehicle {
+	void carMethod(){
+		System.out.println("In the car Method");
+	}
+	public void breakingSystem (Car obj) {
+	
+			obj.carMethod();
+		
+	   if (obj instanceof Ford)
+		   ((Ford)obj).fordMethod ();
+	}
+}
+
+public class Ford extends Car {
+	
+	void fordMethod(){
+		System.out.println("In the Ford Method");
+	}
+	
+	public static void main(String[] args) {
+		
+		Ford f = new Ford();
+		Car c = new Car();
+		
+		Ford f1 = f; //1 see word document 5.1 in OCA
+		Car c1 = f; //2
+		Vehicle v = f;//3
+		Vehicle v1 = c;//4
+		
+		c1.breakingSystem(c);
+		
+		
+		
+		
+		
+	
+	}
+}

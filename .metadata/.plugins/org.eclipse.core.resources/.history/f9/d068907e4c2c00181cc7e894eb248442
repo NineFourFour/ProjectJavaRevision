@@ -1,0 +1,18 @@
+import casting.Circle;
+import casting.Shape;
+
+public class MainForSahpes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Oval extends Circle{
+	
+}
+class Rectangle extends Shape{
+	
+}

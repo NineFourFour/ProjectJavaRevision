@@ -1,0 +1,25 @@
+import casting.Bouncable;
+import casting.Circle;
+import casting.Shape;
+
+public class MainForSahpes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Bouncable b = new Circle();
+		Bouncable b1 = new Oval();
+		
+		Circle c = new Circle();
+		b.bounce();
+		c.bounce();
+	}
+
+}
+
+class Oval extends Circle{
+	
+}
+class Rectangle extends Shape{
+	
+}

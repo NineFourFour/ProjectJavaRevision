@@ -1,0 +1,12 @@
+package casting;
+
+interface Vehicle {
+}
+
+public class Car implements Vehicle {
+
+}
+
+
+class Ford extends Car {
+}

@@ -1,0 +1,14 @@
+package casting;
+
+interface Vehicle {
+}
+class Car implements Vehicle {
+}
+
+public class Ford extends Car {
+
+	public static void main(String[] args) {
+		
+		
+	}
+}

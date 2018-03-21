@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="chaptetOne.X"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
-<fullyQualifiedTypeName name="casting.Capybara"/>
 <fullyQualifiedTypeName name="chapter5ClassDesign.Kangaroo"/>
 <fullyQualifiedTypeName name="chapter5ClassDesign.Marsupial"/>
+<fullyQualifiedTypeName name="chapter5ClassDesign.Hop"/>
+<fullyQualifiedTypeName name="casting.Capybara"/>
+<fullyQualifiedTypeName name="casting.HasTail"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 </qualifiedTypeNameHistroy>

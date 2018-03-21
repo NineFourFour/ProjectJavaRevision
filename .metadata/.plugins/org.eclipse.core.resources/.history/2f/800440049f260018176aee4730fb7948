@@ -1,0 +1,19 @@
+package chapter5ClassDesign;
+
+public class Bunny implements Hop, Leap{
+	
+	public void printDetails(){
+		System.out.println("Hop heigth : "+Hop.getJumpHeight());
+		System.out.println("Leap heigth : "+Leap.getJumpHeight());
+	}
+	
+	public void move(int mv){
+		System.out.println("Speed"+mv);
+	}
+	public static void main(String[] args) {
+		new Bunny().printDetails();
+		Hop h = new Bunny();
+		h.move(34);
+		
+	}
+}

@@ -1,0 +1,47 @@
+package chapter5ClassDesign;
+
+class SuperClass{
+	public SuperClass(int j){
+		
+	}
+	public SuperClass(){
+		
+	}
+}
+
+public class SubClass extends SuperClass{
+    int i, j, k;
+    public SubClass( int m, int n ){  
+    /*
+     * compiler make a call to the no-args constructor 
+     * of the superclass if their isn't one then it will 
+     * no compile
+     */
+    	i = m ;  j = n ;  
+    } //1
+    public SubClass( int m )  {   super(m );   } //2
+}
+
+interface I{
+}
+class A implements I{
+}
+
+class B extends A {
+}
+
+class C extends B{
+	public static void main(String[] args) {
+		A a = new A();
+		B b = new B(); 
+	}
+}
+
+
+
+
+
+
+
+
+
